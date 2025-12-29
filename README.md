@@ -36,33 +36,34 @@ Reconnaissance consists of techniques that involve adversaries actively or passi
 ---
 
 1 | Active Network and Fingerprint Scanner 
-| Goal                       | Best Tool |
-| -------------------------- | --------- |
-| **All-in-one scanner**     | Nmap      |
-| **Fastest scanning**       | Masscan   |
-| **Internet-wide scan**     | ZMap      |
-| **Service fingerprinting** | Amap      |
-| **Stealth fingerprinting** | p0f       |
+| Goal                       | Best Tool                                               |
+| -------------------------- | ------------------------------------------------------- |
+| **All-in-one scanner**     | [Nmap](https://github.com/nmap/nmap)                    |
+| **Fastest scanning**       | [Masscan](https://github.com/robertdavidgraham/masscan) |
+| **Internet-wide scan**     | [ZMap](https://github.com/zmap/zmap)                    |
+| **Service fingerprinting** | [Amap](https://github.com/vanhauser-thc/amap)           |
+| **Stealth fingerprinting** | [p0f](https://github.com/p0f/p0f)                       |
+
 
 2 | Social media profiling and data gathering script 
-| Goal                            | Best Tool       |
-| ------------------------------- | --------------- |
-| Username search (all platforms) | Sherlock        |
-| Accurate profiling              | Social-Analyzer |
-| Detailed OSINT reports          | Maigret         |
-| Email → social accounts         | Holehe          |
-| Instagram intelligence          | OSINTgram       |
-| Twitter/X scraping              | Twint           |
+| Goal                            | Best Tool                                                     |
+| ------------------------------- | ------------------------------------------------------------- |
+| Username search (all platforms) | [Sherlock](https://github.com/sherlock-project/sherlock)      |
+| Accurate profiling              | [Social-Analyzer](https://github.com/qeeqbox/social-analyzer) |
+| Detailed OSINT reports          | [Maigret](https://github.com/soxoj/maigret)                   |
+| Email → social accounts         | [Holehe](https://github.com/megadose/holehe)                  |
+| Instagram intelligence          | [OSINTgram](https://github.com/Datalux/Osintgram)             |
+| Twitter/X scraping              | [Twint](https://github.com/twintproject/twint)                |
 
 3 | Dork based OSINT tool 
-| Goal                   | Best Tool    |
-| ---------------------- | ------------ |
-| Domain & email OSINT   | theHarvester |
-| Large attack surface   | Amass        |
-| Google dork automation | GoDork       |
-| Learning Google dorks  | DorkScanner  |
-| Dork wordlists         | Pagodo       |
-| GitHub secrets         | GitDorker    |
+| Goal                   | Best Tool                                                       |
+| ---------------------- | --------------------------------------------------------------- |
+| Domain & email OSINT   | [theHarvester](https://github.com/laramies/theHarvester)        |
+| Large attack surface   | [Amass](https://github.com/owasp-amass/amass)                   |
+| Google dork automation | [GoDork](https://github.com/dwisiswant0/go-dork)                |
+| Learning Google dorks  | [DorkScanner](https://github.com/madhavmehndiratta/dorkscanner) |
+| Dork wordlists         | [Pagodo](https://github.com/opsdisk/pagodo)                     |
+| GitHub secrets         | [GitDorker](https://github.com/obheda12/GitDorker)              |
 
 4 | Website vulnerability scanner 
 | Use-Case                                | Best Tool                                            |
@@ -75,11 +76,55 @@ Reconnaissance consists of techniques that involve adversaries actively or passi
 | Modular web attack & exploit framework  | [w3af](https://github.com/andresriancho/w3af)        |
 
 5 | WHOIS 
+| Use-Case                                | Best Tool                                                |
+| --------------------------------------- | -------------------------------------------------------- |
+| Standard WHOIS lookup (CLI)             | [whois](https://github.com/rfc1036/whois)                |
+| Advanced domain & IP WHOIS OSINT        | [Amass](https://github.com/owasp-amass/amass)            |
+| WHOIS + DNS + Subdomain intelligence    | [theHarvester](https://github.com/laramies/theHarvester) |
+| Domain ownership & registration history | [WhoisXML API Tools](https://github.com/whois-api)       |
+| Python-based WHOIS automation           | [python-whois](https://github.com/richardpenman/whois)   |
+| Bulk WHOIS & recon framework            | [Recon-ng](https://github.com/lanmaster53/recon-ng)      |
 
-6 | DNS subdomain enumeration | Link | :x:
-7 | Spearphishing Service | Link | :x:
-8 | Victim | Link | :x:
-9 | DNS enumeration and reconnaissance tool | Link | :x:
+6 | DNS subdomain enumeration 
+| Use-Case                               | Best Tool                                                  |
+| -------------------------------------- | ---------------------------------------------------------- |
+| Fast passive subdomain enumeration     | [Subfinder](https://github.com/projectdiscovery/subfinder) |
+| Active brute-force subdomain discovery | [Amass](https://github.com/owasp-amass/amass)              |
+| Wordlist-based subdomain brute force   | [Gobuster](https://github.com/OJ/gobuster)                 |
+| DNS resolution & validation at scale   | [MassDNS](https://github.com/blechschmidt/massdns)         |
+| Subdomain takeover detection           | [Subjack](https://github.com/haccer/subjack)               |
+| All-in-one recon framework             | [Recon-ng](https://github.com/lanmaster53/recon-ng)        |
+
+7 | Spearphishing Service 
+| Use-Case                                            | Best Tool                                                         |
+| --------------------------------------------------- | ----------------------------------------------------------------- |
+| Phishing simulation for security awareness training | [GoPhish](https://github.com/gophish/gophish)                     |
+| Email phishing detection & analysis framework       | [PhishTool](https://github.com/PhishTool/PhishTool)               |
+| Open-source phishing intelligence & indicators      | [PhishStats](https://github.com/mitchellkrogza/Phishing.Database) |
+| Threat intel & phishing campaign tracking           | [MISP](https://github.com/MISP/MISP)                              |
+| Email header & phishing forensics analysis          | [MailAnalyzer](https://github.com/digininja/mailanalyzer)         |
+| SOC-level phishing response automation              | [TheHive](https://github.com/TheHive-Project/TheHive)             |
+
+8 | Victim 
+| Use-Case                                 | Best Tool                                                 |
+| ---------------------------------------- | --------------------------------------------------------- |
+| Incident response case management        | [TheHive](https://github.com/TheHive-Project/TheHive)     |
+| Digital forensics & evidence collection  | [Autopsy](https://github.com/sleuthkit/autopsy)           |
+| Malware analysis for infected victims    | [Cuckoo Sandbox](https://github.com/cuckoosandbox/cuckoo) |
+| Threat intelligence sharing & enrichment | [MISP](https://github.com/MISP/MISP)                      |
+| Log analysis & compromise detection      | [Wazuh](https://github.com/wazuh/wazuh)                   |
+| Phishing incident investigation          | [PhishTool](https://github.com/PhishTool/PhishTool)       |
+
+9 | DNS enumeration and reconnaissance tool 
+| Use-Case                               | Best Tool                                                  |
+| -------------------------------------- | ---------------------------------------------------------- |
+| Comprehensive DNS enumeration & recon  | [Amass](https://github.com/owasp-amass/amass)              |
+| Fast passive DNS & subdomain discovery | [Subfinder](https://github.com/projectdiscovery/subfinder) |
+| Active DNS brute-force enumeration     | [DNSRecon](https://github.com/darkoperator/dnsrecon)       |
+| High-speed DNS resolution at scale     | [MassDNS](https://github.com/blechschmidt/massdns)         |
+| DNS record discovery & zone analysis   | [Fierce](https://github.com/mschwager/fierce)              |
+| All-in-one recon & OSINT framework     | [Recon-ng](https://github.com/lanmaster53/recon-ng)        |
+
 <h5>Notable Projects</h5>
 
 - Project A by X
@@ -374,6 +419,7 @@ All of those projects should be used inside controled enviorements, do not attem
 
 ### Find me
 [<a href="https://www.linkedin.com/in/h%C3%A9ber-j%C3%BAlio-496120190/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin" height="41" width="174"></a>](https://www.linkedin.com/in/h%C3%A9ber-j%C3%BAlio-496120190/)
+
 
 
 
