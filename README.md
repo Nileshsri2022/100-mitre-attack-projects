@@ -36,19 +36,46 @@ Reconnaissance consists of techniques that involve adversaries actively or passi
 ---
 
 1 | Active Network and Fingerprint Scanner 
-| Goal                     | Best Tool |
-| ------------------------ | --------- |
-| All-in-one web scanning  | OWASP ZAP |
-| Fast CVE & exposure scan | Nuclei    |
-| Server misconfig scan    | Nikto     |
-| Black-box scanning       | Wapiti    |
-| Deep crawling            | Arachni   |
-| Exploit framework        | w3af      |
+| Goal                       | Best Tool |
+| -------------------------- | --------- |
+| **All-in-one scanner**     | Nmap      |
+| **Fastest scanning**       | Masscan   |
+| **Internet-wide scan**     | ZMap      |
+| **Service fingerprinting** | Amap      |
+| **Stealth fingerprinting** | p0f       |
 
-2 | Social media profiling and data gathering script | Link | Sherlock, Social-Analyzer, Maigret, Holehe, OSINTgram, Twint
-3 | Dork based OSINT tool | Link | theHarvester, Amass, GoDork, DorkScanner, Pagodo,  GitDorker
-4 | Website vulnerability scanner | Link | OWASP ZAP, Nuclei, Nikto, Wapiti, Arachni, w3af
-5 | WHOIS | Link | :x:
+2 | Social media profiling and data gathering script 
+| Goal                            | Best Tool       |
+| ------------------------------- | --------------- |
+| Username search (all platforms) | Sherlock        |
+| Accurate profiling              | Social-Analyzer |
+| Detailed OSINT reports          | Maigret         |
+| Email → social accounts         | Holehe          |
+| Instagram intelligence          | OSINTgram       |
+| Twitter/X scraping              | Twint           |
+
+3 | Dork based OSINT tool 
+| Goal                   | Best Tool    |
+| ---------------------- | ------------ |
+| Domain & email OSINT   | theHarvester |
+| Large attack surface   | Amass        |
+| Google dork automation | GoDork       |
+| Learning Google dorks  | DorkScanner  |
+| Dork wordlists         | Pagodo       |
+| GitHub secrets         | GitDorker    |
+
+4 | Website vulnerability scanner 
+| Use-Case                                | Best Tool                                            |
+| --------------------------------------- | ---------------------------------------------------- |
+| All-in-one web vulnerability scanner    | [OWASP ZAP](https://github.com/zaproxy/zaproxy)      |
+| Fast CVE & exposure scanning            | [Nuclei](https://github.com/projectdiscovery/nuclei) |
+| Web server misconfiguration scan        | [Nikto](https://github.com/sullo/nikto)              |
+| Black-box web vulnerability testing     | [Wapiti](https://github.com/wapiti-scanner/wapiti)   |
+| Deep crawling & attack surface coverage | [Arachni](https://github.com/Arachni/arachni)        |
+| Modular web attack & exploit framework  | [w3af](https://github.com/andresriancho/w3af)        |
+
+5 | WHOIS 
+
 6 | DNS subdomain enumeration | Link | :x:
 7 | Spearphishing Service | Link | :x:
 8 | Victim | Link | :x:
@@ -347,6 +374,7 @@ All of those projects should be used inside controled enviorements, do not attem
 
 ### Find me
 [<a href="https://www.linkedin.com/in/h%C3%A9ber-j%C3%BAlio-496120190/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin" height="41" width="174"></a>](https://www.linkedin.com/in/h%C3%A9ber-j%C3%BAlio-496120190/)
+
 
 
 
