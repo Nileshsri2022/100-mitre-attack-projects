@@ -36,10 +36,10 @@ Reconnaissance consists of techniques that involve adversaries actively or passi
 ---
 ID | Title | Reference | Example
 ---|---|---|---
-1 | Active Network and Fingerprint Scanner | Link | Nmap,Masscan,ZMap,Amap,p0f
-2 | Social media profiling and data gathering script | Link | :x:
-3 | Dork based OSINT tool | Link | :x:
-4 | Website vulnerability scanner | Link | :x:
+1 | Active Network and Fingerprint Scanner | Link | Nmap, Masscan, ZMap, Amap, p0f
+2 | Social media profiling and data gathering script | Link | Sherlock, Social-Analyzer, Maigret, Holehe, OSINTgram, Twint
+3 | Dork based OSINT tool | Link | theHarvester, Amass, GoDork, DorkScanner, Pagodo,  GitDorker
+4 | Website vulnerability scanner | Link | OWASP ZAP, Nuclei, Nikto, Wapiti, Arachni, w3af
 5 | WHOIS | Link | :x:
 6 | DNS subdomain enumeration | Link | :x:
 7 | Spearphishing Service | Link | :x:
@@ -339,4 +339,5 @@ All of those projects should be used inside controled enviorements, do not attem
 
 ### Find me
 [<a href="https://www.linkedin.com/in/h%C3%A9ber-j%C3%BAlio-496120190/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin" height="41" width="174"></a>](https://www.linkedin.com/in/h%C3%A9ber-j%C3%BAlio-496120190/)
+
 
