@@ -36,7 +36,7 @@ Reconnaissance consists of techniques that involve adversaries actively or passi
 ---
 ID | Title | Reference | Example
 ---|---|---|---
-1 | Active Network and Fingerprint Scanner | Link | :x:
+1 | Active Network and Fingerprint Scanner | Link | Nmap,Masscan,ZMap,Amap,p0f
 2 | Social media profiling and data gathering script | Link | :x:
 3 | Dork based OSINT tool | Link | :x:
 4 | Website vulnerability scanner | Link | :x:
@@ -57,7 +57,7 @@ Resource Development consists of techniques that involve adversaries creating, p
 ---
 ID | Title | Reference | Example
 ---|---|---|---
-10 | Dynamic Website Phishing Tool | Link | :x:
+10 | Dynamic Website Phishing Tool | Link | 
 11 | Eamil based phishing spread | Link | :x:
 12 | Malware sample creation and analysis | Link | :x:
 13 | Replicate a public exploit and use to create a backdoor | Link | :x:
@@ -339,3 +339,4 @@ All of those projects should be used inside controled enviorements, do not attem
 
 ### Find me
 [<a href="https://www.linkedin.com/in/h%C3%A9ber-j%C3%BAlio-496120190/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin" height="41" width="174"></a>](https://www.linkedin.com/in/h%C3%A9ber-j%C3%BAlio-496120190/)
+
