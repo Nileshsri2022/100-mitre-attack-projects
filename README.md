@@ -176,15 +176,76 @@ ID | Title | Reference | Example
 Execution consists of techniques that result in adversary-controlled code running on a local or remote system. Techniques that run malicious code are often paired with techniques from all other tactics to achieve broader goals, like exploring a network or stealing data. For example, an adversary might use a remote access tool to run a PowerShell script that does Remote System Discovery.
 
 ---
-ID | Title | Reference | Example
----|---|---|---
-22 | Remote code execution exploit development | Link | :x:
-23 | Creating a backdoor using shellcode | Link | :x:
-24 | Building a command-line remote administration tool | Link | :x:
-25 | Malicious macro development for document-based attacks | Link | :x:
-26 | Remote code execution via memory corruption vulnerability | Link | :x:
-27 | Command Line Interpreter for C2 | Link | :x:
-28 | Cron based execution | Link | :x:
+ID | Title | Reference 
+22 | Remote code execution exploit development 
+| Goal                                      | Best Tool                                                              |
+| ----------------------------------------- | ---------------------------------------------------------------------- |
+| Exploit framework (authorized testing)    | [Metasploit Framework](https://github.com/rapid7/metasploit-framework) |
+| Vulnerability → RCE detection (templates) | [Nuclei](https://github.com/projectdiscovery/nuclei)                   |
+| Payload analysis & reverse engineering    | [Ghidra](https://github.com/NationalSecurityAgency/ghidra)             |
+| Binary exploitation practice (labs)       | [pwn.college](https://github.com/pwncollege)                           |
+| Safe exploit development labs (CTF-style) | [VulnHub](https://github.com/vulnhub)                                  |
+| Web RCE detection & testing (authorized)  | [OWASP ZAP](https://github.com/zaproxy/zaproxy)                        |
+
+23 | Creating a backdoor using shellcode
+| Goal                                         | Best Tool                                                              |
+| -------------------------------------------- | ---------------------------------------------------------------------- |
+| Learn shellcode concepts safely (labs)       | [pwn.college](https://github.com/pwncollege)                           |
+| Reverse engineering & payload analysis       | [Ghidra](https://github.com/NationalSecurityAgency/ghidra)             |
+| Malware/backdoor behavior analysis (sandbox) | [Cuckoo Sandbox](https://github.com/cuckoosandbox/cuckoo)              |
+| Detect malicious shellcode patterns          | [YARA](https://github.com/VirusTotal/yara)                             |
+| Memory forensics & compromise analysis       | [Volatility](https://github.com/volatilityfoundation/volatility)       |
+| Exploit mitigation & detection research      | [Metasploit Framework](https://github.com/rapid7/metasploit-framework) |
+
+24 | Building a command-line remote administration tool 
+| Goal                                          | Best Tool                                              |
+| --------------------------------------------- | ------------------------------------------------------ |
+| Secure remote command execution               | [OpenSSH](https://github.com/openssh/openssh-portable) |
+| Fleet configuration & automation (CLI-first)  | [Ansible](https://github.com/ansible/ansible)          |
+| High-speed remote execution at scale          | [Salt](https://github.com/saltstack/salt)              |
+| Network device CLI automation                 | [Netmiko](https://github.com/ktbyers/netmiko)          |
+| Python-based SSH task runner                  | [Fabric](https://github.com/fabric/fabric)             |
+| Remote shell & file transfer (cross-platform) | [Mosh](https://github.com/mobile-shell/mosh)           |
+
+25 | Malicious macro development for document-based attacks 
+| Goal                                     | Best Tool                                                 |
+| ---------------------------------------- | --------------------------------------------------------- |
+| Detect malicious macros in documents     | [oletools](https://github.com/decalage2/oletools)         |
+| Static malware & macro analysis          | [YARA](https://github.com/VirusTotal/yara)                |
+| Sandbox analysis of suspicious documents | [Cuckoo Sandbox](https://github.com/cuckoosandbox/cuckoo) |
+| Phishing & attachment investigation      | [PhishTool](https://github.com/PhishTool/PhishTool)       |
+| Email attachment forensics               | [MailAnalyzer](https://github.com/digininja/mailanalyzer) |
+| Incident response case management        | [TheHive](https://github.com/TheHive-Project/TheHive)     |
+
+26 | Remote code execution via memory corruption vulnerability 
+| Goal                                             | Best Tool                                                        |
+| ------------------------------------------------ | ---------------------------------------------------------------- |
+| Binary reverse engineering & root-cause analysis | [Ghidra](https://github.com/NationalSecurityAgency/ghidra)       |
+| Dynamic analysis & crash triage                  | [AFL++](https://github.com/AFLplusplus/AFLplusplus)              |
+| Memory corruption detection (sanitizers)         | [LLVM Sanitizers](https://github.com/llvm/llvm-project)          |
+| Runtime exploit mitigation research              | [PaX / grsecurity](https://github.com/PaXTeam)                   |
+| Memory forensics after compromise                | [Volatility](https://github.com/volatilityfoundation/volatility) |
+| Authorized exploit-defense labs (CTF-style)      | [pwn.college](https://github.com/pwncollege)                     |
+
+27 | Command Line Interpreter for C2 
+| Goal                                      | Best Tool                                                 |
+| ----------------------------------------- | --------------------------------------------------------- |
+| Secure remote command execution (CLI)     | [OpenSSH](https://github.com/openssh/openssh-portable)    |
+| Fleet-wide command orchestration          | [Ansible](https://github.com/ansible/ansible)             |
+| High-speed remote execution at scale      | [Salt](https://github.com/saltstack/salt)                 |
+| Incident response live command runner     | [Velociraptor](https://github.com/Velocidex/velociraptor) |
+| Red-team training C2 **simulator** (labs) | [CALDERA](https://github.com/mitre/caldera)               |
+| Secure, auditable remote shell            | [Teleport](https://github.com/gravitational/teleport)     |
+
+28 | Cron based execution 
+| Goal                                    | Best Tool                                                    |
+| --------------------------------------- | ------------------------------------------------------------ |
+| Native time-based job scheduling        | [Cron](https://github.com/vixie/cron)                        |
+| Advanced cron replacement with logging  | [Cronie](https://github.com/cronie-crond/cronie)             |
+| Workflow scheduling & automation        | [Apache Airflow](https://github.com/apache/airflow)          |
+| Cron-style job scheduler (Go)           | [Go-Cron](https://github.com/robfig/cron)                    |
+| Distributed & fault-tolerant scheduling | [Nomad](https://github.com/hashicorp/nomad)                  |
+| Cron job monitoring & alerting          | [Healthchecks](https://github.com/healthchecks/healthchecks) |
 
 <h5>Notable Projects</h5>
 
@@ -197,15 +258,76 @@ ID | Title | Reference | Example
 Persistence consists of techniques that adversaries use to keep access to systems across restarts, changed credentials, and other interruptions that could cut off their access. Techniques used for persistence include any access, action, or configuration changes that let them maintain their foothold on systems, such as replacing or hijacking legitimate code or adding startup code.
 
 ---
-ID | Title | Reference | Example
----|---|---|---
-29 | Developing a rootkit for Windows | Link | :x:
-30 | Implementing a hidden service in a web server | Link | :x:
-31 | Backdooring a legitimate executable | Link | :x:
-32 | Creating a scheduled task for persistent access | Link | :x:
-33 | Developing a kernel-level rootkit for Linux | Link | :x:
-34 | LSASS Driver | Link | :x:
-35 | Shortcut modification | Link | :x:
+ID | Title 
+29 | Developing a rootkit for Windows
+| Goal                                        | Best Tool                                                                      |
+| ------------------------------------------- | ------------------------------------------------------------------------------ |
+| Kernel & malware reverse engineering        | [Ghidra](https://github.com/NationalSecurityAgency/ghidra)                     |
+| Rootkit detection (user & kernel level)     | [GMER](https://github.com/gmer/gmer)                                           |
+| Memory forensics & hidden artifact analysis | [Volatility](https://github.com/volatilityfoundation/volatility)               |
+| Syscall, driver & persistence monitoring    | [Sysmon](https://github.com/microsoft/SysmonForLinux)                          |
+| Threat hunting & detection engineering      | [Velociraptor](https://github.com/Velocidex/velociraptor)                      |
+| Windows internals learning (defensive labs) | [Windows Internals Book Samples](https://github.com/zodiacon/WindowsInternals) |
+
+30 | Implementing a hidden service in a web server
+| Goal                                             | Best Tool                                                      |
+| ------------------------------------------------ | -------------------------------------------------------------- |
+| Private service access via authentication & ACLs | [NGINX](https://github.com/nginx/nginx)                        |
+| Zero-trust private access to web apps            | [Cloudflare Tunnel](https://github.com/cloudflare/cloudflared) |
+| Secure internal service exposure                 | [Traefik](https://github.com/traefik/traefik)                  |
+| Service-to-service authentication & mTLS         | [Istio](https://github.com/istio/istio)                        |
+| Hidden endpoints protection (WAF & rules)        | [ModSecurity](https://github.com/SpiderLabs/ModSecurity)       |
+| Audit, logging & intrusion detection             | [Wazuh](https://github.com/wazuh/wazuh)                        |
+
+31 | Backdooring a legitimate executable
+| Goal                                     | Best Tool                                                        |
+| ---------------------------------------- | ---------------------------------------------------------------- |
+| Static binary analysis & diffing         | [Ghidra](https://github.com/NationalSecurityAgency/ghidra)       |
+| Malware detection rules & signatures     | [YARA](https://github.com/VirusTotal/yara)                       |
+| Binary integrity & tamper detection      | [Tripwire](https://github.com/Tripwire/tripwire-open-source)     |
+| Executable reputation & sandboxing       | [Cuckoo Sandbox](https://github.com/cuckoosandbox/cuckoo)        |
+| Memory forensics to spot injected code   | [Volatility](https://github.com/volatilityfoundation/volatility) |
+| Supply-chain security & artifact signing | [Sigstore](https://github.com/sigstore/sigstore)                 |
+
+32 | Creating a scheduled task for persistent access
+| Goal                                      | Best Tool                                                 |
+| ----------------------------------------- | --------------------------------------------------------- |
+| Audit & monitor scheduled tasks (Windows) | [Sysmon](https://github.com/microsoft/SysmonForLinux)     |
+| Enterprise endpoint detection & response  | [Wazuh](https://github.com/wazuh/wazuh)                   |
+| Live endpoint investigation & hunts       | [Velociraptor](https://github.com/Velocidex/velociraptor) |
+| Forensics of persistence mechanisms       | [Autoruns](https://github.com/microsoft/Sysinternals)     |
+| Centralized logging & alerting            | [Elastic Stack](https://github.com/elastic)               |
+| Baseline hardening & compliance checks    | [Lynis](https://github.com/CISOfy/lynis)                  |
+
+33 | Developing a kernel-level rootkit for Linux 
+| Goal                                        | Best Tool                                                        |
+| ------------------------------------------- | ---------------------------------------------------------------- |
+| Kernel & malware reverse engineering        | [Ghidra](https://github.com/NationalSecurityAgency/ghidra)       |
+| Rootkit detection (user & kernel space)     | [rkhunter](https://github.com/installation/rkhunter)             |
+| Kernel integrity & LKM monitoring           | [LKRG](https://github.com/lkrg-org/lkrg)                         |
+| Memory forensics & hidden artifact analysis | [Volatility](https://github.com/volatilityfoundation/volatility) |
+| System call & behavior monitoring           | [Falco](https://github.com/falcosecurity/falco)                  |
+| Linux hardening & audit checks              | [Lynis](https://github.com/CISOfy/lynis)                         |
+
+34 | LSASS Driver
+| Goal                                             | Best Tool                                                                      |
+| ------------------------------------------------ | ------------------------------------------------------------------------------ |
+| Detect credential dumping & LSASS abuse          | [Sysmon](https://github.com/microsoft/SysmonForLinux)                          |
+| Endpoint detection & response (LSASS monitoring) | [Wazuh](https://github.com/wazuh/wazuh)                                        |
+| Memory forensics & LSASS analysis                | [Volatility](https://github.com/volatilityfoundation/volatility)               |
+| Threat hunting & live response                   | [Velociraptor](https://github.com/Velocidex/velociraptor)                      |
+| Windows credential protection (LSA hardening)    | [Microsoft Defender ASR Rules](https://github.com/MicrosoftDocs/defender-docs) |
+| Credential theft detection research              | [Mimikatz Detection Rules](https://github.com/SigmaHQ/sigma)                   |
+
+35 | Shortcut modification
+| Goal                                     | Best Tool                                                        |
+| ---------------------------------------- | ---------------------------------------------------------------- |
+| Detect malicious LNK files & persistence | [Sysmon](https://github.com/microsoft/SysmonForLinux)            |
+| LNK file forensic analysis               | [LnkParse](https://github.com/Matmaus/LnkParse3)                 |
+| Endpoint threat detection & response     | [Wazuh](https://github.com/wazuh/wazuh)                          |
+| Memory & artifact forensics              | [Volatility](https://github.com/volatilityfoundation/volatility) |
+| Threat hunting & live investigation      | [Velociraptor](https://github.com/Velocidex/velociraptor)        |
+| Detection rules for shortcut abuse       | [Sigma](https://github.com/SigmaHQ/sigma)                        |
 
 <h5>Notable Projects</h5>
 
@@ -419,6 +541,7 @@ All of those projects should be used inside controled enviorements, do not attem
 
 ### Find me
 [<a href="https://www.linkedin.com/in/h%C3%A9ber-j%C3%BAlio-496120190/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin" height="41" width="174"></a>](https://www.linkedin.com/in/h%C3%A9ber-j%C3%BAlio-496120190/)
+
 
 
 
